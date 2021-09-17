@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <!-- Vue.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/4def99420f.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+    </head>   
+    <body class="h-screen flex justify-center">
+        
+        <div class="shadow-2xl mt-5 my-iphone-outline">
+
+            <header class="mb-10">
+                <div class="flex justify-center items-center mb-4">
+                    <div class="my-iphone-sensor"></div>
+                </div>
+                <div class="flex justify-center m-3">
+                    <div class="flex items-center">
+                        <div class="my-iphone-inner-camera"></div>
+                        <div class="my-iphone-mic mx-3"></div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="my-iphone-screen mb-3">
+
+                <div class="grid grid-flow-col grid-cols-3 m-2">
+                    <div class="flex items-center gap-1">
+                        <div class="flex items-end ">
+                            <div class="h-2 w-2 bg-white border-2 border-black"></div>
+                            <div class="h-3 w-2 bg-white border-2 border-black"></div>
+                            <div class="h-4 w-2 bg-white border-2 border-black"></div>
+                            <div class="h-5 w-2 bg-white border-2 border-black"></div>
+                        </div>
+                        <div class="text-white">SoltBank</div>
+                        <i class="fas fa-wifi text-white"></i>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <div class="text-white">
+                            14:44
+                        </div>
+                    </div>
+                    <div class="flex justify-end items-center gap-1">
+                        <div class="text-white">16%</div>
+                        <i class="fas fa-battery-quarter text-white fa-2x text-yellow-500"></i>
+                    </div>
+
+                </div>
+
+
+            </main>
+
+            <footer>
+                <div class="flex justify-center">
+                    <div class="my-iphone-home-button">
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </body>
+</html>

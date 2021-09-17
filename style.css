@@ -1,0 +1,48 @@
+
+.my-iphone-outline{
+    width: 500px;
+    height: 1000px;
+
+    border-color: #aba899 #c4b89e silver #c4a688;
+    border-radius: 60px 60px 60px 60px;
+    border-style: solid;
+    border-width: 10px;
+
+    background-color: whitesmoke;
+    padding: 20px;
+}
+.my-iphone-inner-camera{
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 60px 60px 60px 60px;
+}
+.my-iphone-sensor{
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    border-radius: 60px 60px 60px 60px;
+}
+.my-iphone-mic{
+    width: 100px;
+    height: 6px;
+    background-color: black;
+    border-radius: 60px 60px 60px 60px;
+}
+.my-iphone-screen{
+    height: 800px;
+    width: 100%;
+    background-color: black;
+}
+.my-iphone-home-button{
+    width: 70px;
+    height: 70px;
+
+    border-color: #aba899 #c4b89e silver #c4a688;
+    border-radius: 60px 60px 60px 60px;
+    border-style: solid;
+    border-width: 5px;
+
+    background-color: whitesmoke;
+    padding: 20px;
+}
