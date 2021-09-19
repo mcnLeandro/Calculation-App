@@ -63,7 +63,7 @@ const app = new Vue({
 
         },
         /***********************
-         * else area
+         * calculation option area
          ***********************/
         showEqualResult: function(){
 
@@ -170,10 +170,20 @@ const app = new Vue({
             this.operandStack.pop()
             this.operatorStack.pop()
 
-        }
-        
+        },
+        /***************
+         * else area
+         ****************/
+        setTime: function(){
+            const date = new Date
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
 
+            this.time = `${hours}:${minutes}`;
+        }
         
     }
 
 }) 
+
+setInterval(app.setTime,1000);
