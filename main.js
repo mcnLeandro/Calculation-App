@@ -2,7 +2,7 @@ const app = new Vue({
     el: '#my-iphone',
     data: {
 
-        time: "14:44",
+        time: "",
         currentOperand: "",
         currentOperator: "",
         operandStack: [], //<= currentOperand
@@ -175,9 +175,14 @@ const app = new Vue({
          * else area
          ****************/
         setTime: function(){
+
             const date = new Date
-            const hours = date.getHours();
-            const minutes = date.getMinutes();
+
+            let hours = date.getHours().toString();
+            let minutes = date.getMinutes().toString();
+
+            hours   = hours.length == 1   ? "0" + hours   : hours ;
+            minutes = minutes.length == 1 ? "0" + minutes : minutes ;
 
             this.time = `${hours}:${minutes}`;
         }
