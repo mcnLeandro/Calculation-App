@@ -14,7 +14,7 @@
     </head>   
     <body class="h-screen flex justify-center">
         
-        <div class="shadow-2xl mt-5 my-iphone-outline">
+        <div id="my-iphone" class="shadow-2xl mt-5 my-iphone-outline">
 
             <header class="mb-10">
                 <div class="flex justify-center items-center mb-4">
@@ -43,7 +43,7 @@
                     </div>
                     <div class="flex justify-center items-center">
                         <div class="text-white">
-                            14:44
+                            {{time}}
                         </div>
                     </div>
                     <div class="flex justify-end items-center gap-1">
@@ -60,42 +60,39 @@
                 * caluculation area Start
                 **********************************-->
                 <div class="calculation-result-box text-white flex justify-end items-end">
-                    <div class="">5379023</div>
+                    <div>{{ display }}</div>
                 </div>
 
                 <div class="grid grid-flow-col grid-cols-4 grid-rows-5">
 
                     <div class="row-span-1 col-span-3 | grid grid-flow-col grid-cols-3 grid-rows-1 gap-4 | !bg-yellow-100 calculation-buttons gray-buttons">
-                        <div>AC</div>
-                        <div>+/-</div>
-                        <div>%</div>
+                        <div v-on:click="allClear()">AC</div>
+                        <div v-on:click="oppositeNumber()">+/-</div>
+                        <div v-on:click="divide100()">%</div>
                     </div>
 
                     <div class="row-span-4 col-span-3 | grid grid-cols-3 grid-rows-4 gap-4 | !bg-red-100 calculation-buttons black-buttons mt-1">
 
-                        <div>7</div>
-                        <div>8</div>
-                        <div>9</div>
-
-                        <div>4</div>
-                        <div>5</div>
-                        <div>6</div>
-
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        
-                        <div class="col-span-2 w-6" style="width: 200px;">0</div>
-                        <div>.</div>
+                        <div v-on:click="setCurrentOperand('7')">7</div>
+                        <div v-on:click="setCurrentOperand('8')">8</div>
+                        <div v-on:click="setCurrentOperand('9')">9</div>
+                        <div v-on:click="setCurrentOperand('4')">4</div>
+                        <div v-on:click="setCurrentOperand('5')">5</div>
+                        <div v-on:click="setCurrentOperand('6')">6</div>
+                        <div v-on:click="setCurrentOperand('1')">1</div>
+                        <div v-on:click="setCurrentOperand('2')">2</div>
+                        <div v-on:click="setCurrentOperand('3')">3</div>
+                        <div v-on:click="setCurrentOperand('0')" class="col-span-2 w-6" style="width: 200px;">0</div>
+                        <div v-on:click="setCurrentOperand('.')">.</div>
 
                     </div>
 
                     <div class="row-span-5 col-span-1 | grid grid-flow-col grid-cols-1 grid-rows-5 gap-4 | !bg-gray-100 calculation-buttons orange-buttons mt-1">
-                        <div>÷</div>
-                        <div>×</div>
-                        <div>-</div>
-                        <div>+</div>
-                        <div>=</div>
+                        <div v-on:click="setCurrentOperator('÷')">÷</div>
+                        <div v-on:click="setCurrentOperator('×')">×</div>
+                        <div v-on:click="setCurrentOperator('-')">-</div>
+                        <div v-on:click="setCurrentOperator('+')">+</div>
+                        <div v-on:click="showEqualResult()">=</div>
                     </div>
 
                 </div>
@@ -113,6 +110,6 @@
                 </div>
             </footer>
         </div>
-
+        <script src="main.js" async></script>
     </body>
 </html>

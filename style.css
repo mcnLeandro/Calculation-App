@@ -73,7 +73,9 @@
     justify-items: center;
     text-align: center;
     font-size: 28px;
+
     transition: all .001s;
+    user-select: none;
 }
 .calculation-buttons div:active{
 
